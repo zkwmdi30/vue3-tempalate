@@ -1,0 +1,78 @@
+/* alert (sweetAlert2) */
+.swal2-container {
+  z-index: 9000 !important;
+}
+.swal2-title {
+  padding: 0 1em 0 !important;
+}
+.swal-alert-popup {
+  width: 382px !important;
+  padding: 2rem 1.6rem 1.6rem !important;
+  border-radius: 5px !important;
+  display: block !important;
+}
+.swal-alert-popup button {
+  font-family: 'Pretendard', '맑은 고딕', Dotum, 'droid sans fallback', 'AppleGothic', sans-serif;
+}
+.swal-alert-popup .swal2-header {
+  text-align: center;
+}
+.swal-alert-image {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  height: 50px;
+  max-height: 50px;
+}
+.swal-alert-html {
+  overflow: hidden !important;
+  margin: 30px 0 40px 0 !important;
+  padding: 10px 0px !important;
+  font-size: 15px !important;
+  color: #535d79 !important;
+  font-weight: 400 !important;
+  line-height: 20px !important;
+}
+.swal-alert-title {
+  margin-top: 4px !important;
+  margin-bottom: 0 !important;
+  font-size: 18px !important;
+  color: #091840 !important;
+  font-weight: 700 !important;
+}
+.swal-alert-actions {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  width: 100% !important;
+}
+.swal-alert-actions button:focus {
+  box-shadow: none !important;
+}
+.swal-alert-actions button + button {
+  margin-left: 9px !important;
+}
+.swal-alert-ok {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 156px !important;
+  height: 60px !important;
+  border-color: #0093ff !important;
+  background: #0093ff !important;
+  color: #fff !important;
+  line-height: 48px !important;
+  font-size: 15px !important;
+  border-radius: 5px !important;
+  text-align: center !important;
+}
+.swal2-cancel {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 156px !important;
+  height: 60px !important;
+  border-color: #e7e9ed !important;
+  background: #e7e9ed !important;
+  color: #212121 !important;
+  line-height: 48px !important;
+  font-size: 15px !important;
+  border-radius: 5px !important;
+  text-align: center !important;
+}
