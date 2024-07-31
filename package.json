@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --mode development",
+    "dev": "vite --mode development --port 3000",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "test:unit": "vitest",
@@ -19,9 +19,11 @@
     "jwt-decode": "^4.0.0",
     "mitt": "^3.0.1",
     "pinia": "^2.1.7",
+    "pinia-plugin-persistedstate": "^3.2.1",
     "sass": "^1.77.8",
     "sweetalert2": "^11.12.3",
     "vue": "^3.4.29",
+    "vue-query": "^1.26.0",
     "vue-router": "^4.4.0",
     "vue3-cookies": "^1.0.6"
   },
