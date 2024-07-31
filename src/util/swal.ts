@@ -1,6 +1,6 @@
 import Swal from 'sweetalert2';
 
-export const alertPopup = ({ title, content, btnText }: { title: string; content: string; btnText: string }) => {
+export const alertPopup = ({ title, content, btnText }: { title?: string; content: string; btnText?: string }) => {
   const confirmText = btnText || '확인';
 
   const $swal = Swal.fire({
@@ -22,7 +22,7 @@ export const alertPopup = ({ title, content, btnText }: { title: string; content
   return $swal;
 };
 
-export const confirmPopup = async ({ title, content, btnText }: { title: string; content: string; btnText: string }) => {
+export const confirmPopup = async ({ title, content, btnText }: { title?: string; content: string; btnText?: string }) => {
   const confirmText = btnText || '확인';
 
   const result = await Swal.fire({
