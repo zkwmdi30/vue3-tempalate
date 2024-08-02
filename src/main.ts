@@ -34,4 +34,12 @@ if (cookies.get('access-token')) {
 import { VueQueryPlugin } from 'vue-query';
 app.use(VueQueryPlugin);
 
+import PrimeVue from 'primevue/config';
+import Aura from '@primevue/themes/aura';
+app.use(PrimeVue, {
+  theme: {
+    preset: Aura
+  }
+});
+
 app.mount('#app');

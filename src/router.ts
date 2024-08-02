@@ -6,6 +6,11 @@ const mainRoutes = [
     name: 'main',
     path: '/',
     component: () => import('@/views/MainView.vue')
+  },
+  {
+    name: 'editor',
+    path: '/editor',
+    component: () => import('@/views/EditorTest.vue')
   }
 ];
 
