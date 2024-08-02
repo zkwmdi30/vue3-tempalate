@@ -5,26 +5,76 @@ defineProps(['msg']);
 const NODE_ENV = import.meta.env.NODE_ENV;
 const VITE_APP_API_PATH = import.meta.env.VITE_APP_API_PATH;
 
+// Define interfaces
+interface Geo {
+  lat: string;
+  lng: string;
+}
+
+interface Address {
+  street: string;
+  suite: string;
+  city: string;
+  zipcode: string;
+  geo: Geo;
+}
+
+interface Company {
+  name: string;
+  catchPhrase: string;
+  bs: string;
+}
+
+interface User {
+  id: number;
+  name: string;
+  username: string;
+  email: string;
+  address: Address;
+  phone: string;
+  website: string;
+  company: Company;
+}
+
 import { useQuery } from 'vue-query';
 import axios from '@/util/axios';
-const fetchEnable = ref(false);
-const userId = ref(1);
+const postsId = ref(0);
+
+const { data: posts } = useQuery({
+  queryKey: ['fetchPosts'],
+  queryFn: async () => {
+    const { data } = await axios.get(`/posts`);
+    return data;
+  },
+  staleTime: Infinity,
+  onSuccess: async (data: any) => {
+    if (data.length > 0) {
+      postsId.value = data.find((el: any) => el)?.id;
+      refetch.value();
+    }
+  }
+});
+
 const {
   isLoading,
   isError,
-  data: users,
-  error
-} = useQuery({
-  queryKey: ['fetchUsers', userId],
+  data: postData,
+  error,
+  refetch
+} = useQuery<User>({
+  queryKey: ['fetchPostData'],
   queryFn: async () => {
-    const { data } = await axios.get(`/users/${userId.value}`);
-    fetchEnable.value = false;
+    const { data } = await axios.get(`/posts/${postsId.value}`);
     return data;
   },
-  staleTime: Infinity
+  staleTime: Infinity,
+  enabled: false
 });
-const changeUser = () => {
-  userId.value++;
+const changeUser = async () => {
+  postsId.value++;
+  await refetch.value();
+  alertPopup({ content: 'postData.title : ' + postData.value.title });
+  alertPopup({ content: postData.value.title });
 };
 
 import { alertPopup } from '@/util/swal';
@@ -44,7 +94,7 @@ alertPopup({ content: 'test' });
       <span v-if="isLoading">Loading...</span>
       <span v-else-if="isError">Error: {{ error.message }}</span>
       <div v-else>
-        {{ users }}
+        <p>postData : {{ postData }}</p>
       </div>
       <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> + <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
     </h3>

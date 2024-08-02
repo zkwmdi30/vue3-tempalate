@@ -20,6 +20,7 @@
     "mitt": "^3.0.1",
     "pinia": "^2.1.7",
     "pinia-plugin-persistedstate": "^3.2.1",
+    "primevue": "^4.0.3",
     "sass": "^1.77.8",
     "sweetalert2": "^11.12.3",
     "vue": "^3.4.29",
