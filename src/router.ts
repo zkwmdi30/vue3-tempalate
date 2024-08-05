@@ -10,7 +10,12 @@ const mainRoutes = [
   {
     name: 'editor',
     path: '/editor',
-    component: () => import('@/views/EditorTest.vue')
+    component: () => import('@/views/test/EditorTest.vue')
+  },
+  {
+    name: 'dataTable',
+    path: '/dataTable',
+    component: () => import('@/views/test/dataTable.vue')
   }
 ];
 

@@ -85,8 +85,6 @@ alertPopup({ content: 'test' });
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
     <h3>
-      You’ve successfully created a project with
-
       <button @click="changeUser">getUsersData</button>
 
       {{ NODE_ENV }}
@@ -94,9 +92,8 @@ alertPopup({ content: 'test' });
       <span v-if="isLoading">Loading...</span>
       <span v-else-if="isError">Error: {{ error.message }}</span>
       <div v-else>
-        <p>postData : {{ postData }}</p>
+        <p>data : {{ postData }}</p>
       </div>
-      <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> + <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
     </h3>
   </div>
 </template>

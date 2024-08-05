@@ -21,14 +21,16 @@ import SupportIcon from '@/components/icons/IconSupport.vue';
     <template #icon>
       <ToolingIcon />
     </template>
-    <template #heading>추가예정...</template>
+    <template #heading>
+      <router-link :to="'dataTable'">데이터 테이블 (그리드)</router-link>
+    </template>
   </WelcomeItem>
 
   <WelcomeItem>
     <template #icon>
       <EcosystemIcon />
     </template>
-    <template #heading>추가예정...</template>
+    <template #heading>차트</template>
   </WelcomeItem>
 
   <WelcomeItem>
@@ -42,6 +44,6 @@ import SupportIcon from '@/components/icons/IconSupport.vue';
     <template #icon>
       <SupportIcon />
     </template>
-    <template #heading>추가예정...</template>
+    <template #heading>웹 소켓 (Alli 테스트)</template>
   </WelcomeItem>
 </template>
