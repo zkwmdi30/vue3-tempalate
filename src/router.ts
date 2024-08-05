@@ -16,6 +16,11 @@ const mainRoutes = [
     name: 'dataTable',
     path: '/dataTable',
     component: () => import('@/views/test/dataTable.vue')
+  },
+  {
+    name: 'chart',
+    path: '/chart',
+    component: () => import('@/views/test/chartTest.vue')
   }
 ];
 

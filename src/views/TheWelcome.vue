@@ -30,7 +30,9 @@ import SupportIcon from '@/components/icons/IconSupport.vue';
     <template #icon>
       <EcosystemIcon />
     </template>
-    <template #heading>차트</template>
+    <template #heading>
+      <router-link :to="'chart'">차트</router-link>
+    </template>
   </WelcomeItem>
 
   <WelcomeItem>
