@@ -43,7 +43,7 @@ const postsId = ref(0);
 const { data: posts } = useQuery({
   queryKey: ['fetchPosts'],
   queryFn: async () => {
-    const { data } = await axios.get(`/posts`);
+    const { data } = await axios.get(`https://jsonplaceholder.typicode.com/posts`);
     return data;
   },
   staleTime: Infinity,
@@ -64,7 +64,7 @@ const {
 } = useQuery<User>({
   queryKey: ['fetchPostData'],
   queryFn: async () => {
-    const { data } = await axios.get(`/posts/${postsId.value}`);
+    const { data } = await axios.get(`https://jsonplaceholder.typicode.com/posts/${postsId.value}`);
     return data;
   },
   staleTime: Infinity,

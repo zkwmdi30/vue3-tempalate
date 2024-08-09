@@ -46,6 +46,8 @@ import SupportIcon from '@/components/icons/IconSupport.vue';
     <template #icon>
       <SupportIcon />
     </template>
-    <template #heading>웹 소켓 (Alli 테스트)</template>
+    <template #heading>
+      <router-link :to="'websocket'">웹 소켓 (Alli 테스트)</router-link>
+    </template>
   </WelcomeItem>
 </template>

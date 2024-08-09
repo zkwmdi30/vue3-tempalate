@@ -21,6 +21,11 @@ const mainRoutes = [
     name: 'chart',
     path: '/chart',
     component: () => import('@/views/test/chartTest.vue')
+  },
+  {
+    name: 'websocket',
+    path: '/websocket',
+    component: () => import('@/views/test/websocket.vue')
   }
 ];
 
